@@ -111,10 +111,27 @@ function About() {
             <div className="row lg-4">
                 <div className="col-md-4 col-12 mx-auto my-2">
                     <div className="card border-0 shadow-lg p-4">
-                        <img src="https://source.unsplash.com/TMgQMXoglsM/500x350" className="card-img-top" alt="director" />
+                        <img src={require('../images/huy.jpg')} className="card-img-top" alt="director" />
                         <div className="card-body">
                             <h5 className="card-title mb-0">Thành viên nhóm</h5>
-                            <div className="card-text text-black-50">Business Analyst<p className="float-right">7 years</p>
+                            <div className="card-text text-black-50">Dương Quang Huy<p className="float-right">23 years old</p>
+                            </div>
+                            <h6 className="mt-5">Liên hệ</h6>
+                            <div className="d-flex justify-content-around">
+                                <FaFacebookSquare className="connect" />
+                                <AiFillInstagram className="connect" />
+                                <FaLinkedin className="connect" />
+                                <IoLogoYoutube className="connect" />
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                <div className="col-md-4 col-12 mx-auto my-2">
+                    <div className="card border-0 shadow-lg p-4">
+                        <img src={require('../images/tam.jpg')} className="card-img-top" alt="director" />
+                        <div className="card-body">
+                            <h5 className="card-title mb-0">Thành viên nhóm</h5>
+                            <div className="card-text text-black-50">Nguyễn Đức Tâm<p className="float-right">22 years old</p>
                             </div>
                             <h6 className="mt-5">Liên hệ</h6>
                             <div className="d-flex justify-content-around">
@@ -128,10 +145,10 @@ function About() {
                 </div>
                 <div className="col-md-4 col-12 mx-auto my-2">
                     <div className="card border-0 shadow-lg p-4">
-                        <img src="https://source.unsplash.com/sNut2MqSmds/500x350" className="card-img-top" alt="director" />
+                        <img src={require('../images/phuc.jpg')} className="card-img-top" alt="director" />
                         <div className="card-body">
                             <h5 className="card-title mb-0">Thành viên nhóm</h5>
-                            <div className="card-text text-black-50">Tester<p className="float-right">5 years</p>
+                            <div className="card-text text-black-50">Dương Minh Phúc<p className="float-right">22 years old</p>
                             </div>
                             <h6 className="mt-5">Liên hệ</h6>
                             <div className="d-flex justify-content-around">
@@ -145,27 +162,10 @@ function About() {
                 </div>
                 <div className="col-md-4 col-12 mx-auto my-2">
                     <div className="card border-0 shadow-lg p-4">
-                        <img src="https://source.unsplash.com/9UVmlIb0wJU/500x350" className="card-img-top" alt="director" />
+                        <img src={require('../images/trung.jpg')} className="card-img-top" alt="director" />
                         <div className="card-body">
                             <h5 className="card-title mb-0">Thành viên nhóm</h5>
-                            <div className="card-text text-black-50">Coder<p className="float-right">8 years</p>
-                            </div>
-                            <h6 className="mt-5">Liên hệ</h6>
-                            <div className="d-flex justify-content-around">
-                                <FaFacebookSquare className="connect" />
-                                <AiFillInstagram className="connect" />
-                                <FaLinkedin className="connect" />
-                                <IoLogoYoutube className="connect" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-4 col-12 mx-auto my-2">
-                    <div className="card border-0 shadow-lg p-4">
-                        <img src="https://source.unsplash.com/9UVmlIb0wJU/500x350" className="card-img-top" alt="director" />
-                        <div className="card-body">
-                            <h5 className="card-title mb-0">Trưởng nhóm</h5>
-                            <div className="card-text text-black-50">Team Leader<p className="float-right">14 years</p>
+                            <div className="card-text text-black-50">Nguyễn Thế Trung<p className="float-right">21 years old</p>
                             </div>
                             <h6 className="mt-5">Liên hệ</h6>
                             <div className="d-flex justify-content-around">
