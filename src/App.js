@@ -14,13 +14,12 @@ import Contact from './pages/Contact';
 import Booknow from './pages/Booknow';
 
 function App() {
-
   return (
     <div className="App">
 
       <BrowserRouter>
         <Navbar />
-        <Route>
+        <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
@@ -28,7 +27,7 @@ function App() {
           <Route exact path="/rooms/:slug" component={SingleRoom} />
           <Route exact path="/booknow/:slug" component={Booknow} />
           <Route component={Error} />
-        </Route>
+        </Switch>
         <Footer />
       </BrowserRouter>
     </div>
@@ -36,4 +35,3 @@ function App() {
 }
 
 export default App;
-
