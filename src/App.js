@@ -20,7 +20,7 @@ function App() {
 
       <BrowserRouter>
         <Navbar />
-        <Switch>
+        <Route>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
@@ -28,7 +28,7 @@ function App() {
           <Route exact path="/rooms/:slug" component={SingleRoom} />
           <Route exact path="/booknow/:slug" component={Booknow} />
           <Route component={Error} />
-        </Switch>
+        </Route>
         <Footer />
       </BrowserRouter>
     </div>
