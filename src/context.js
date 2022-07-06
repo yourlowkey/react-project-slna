@@ -7,15 +7,15 @@ const RoomContext = React.createContext();
 
 // get data through API and provide data to other component
 export default function RoomProvider({children}){
-    const [{isLoanding,message},{start,stop}]= useLoading(true);
+    // const [{isLoanding,message},{start,stop}]= useLoading(true);
     const [data,setData]=useState([]);
     useEffect(()=>{
-        start();
+        // start();
         axios
             .get("https://62c381c2876c4700f53d4ded.mockapi.io/api/rooms")
             .then((response)=> setData(response.data));
-        stop();
-    },[start, stop]);
+        // stop();
+    },[]);
     const [state,setState]=useState({
         rooms:[],
         sortedRoom:[],
