@@ -1,5 +1,5 @@
 import React from 'react';
-import Table from 'react-bootstrap';
+
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -17,9 +17,9 @@ function ItemTable(props) {
     const sortData = [...items]; //tạo mới dữ liệu để state trỏ đến dữ liệu mới
     //const sortData = items;
     if (type == 'string') {
-      sortData.sort((a, b) => direction * a[field].localeCompare(b[field]));
+      sortData.sort((a, b) => direction * a.fields[field].localeCompare(b.fields[field]));
     } else if (type == 'number') {
-      sortData.sort((a, b) => direction * (a[field] - b[field]));
+      sortData.sort((a, b) => direction * (a.fields[field] - b.fields[field]));
     }
     setDirection(direction * -1);
     setItems(sortData);
@@ -61,12 +61,17 @@ function ItemTable(props) {
         <td>{item.fields.capacity}</td>
         {/* <td>{item.mark}</td> */}
         <td>
-          <Link to={'/item/' + item.id}>Details</Link>
-          <Link to={'/itemedit/' + item.id}>
+          <Link to={'/roomtabledetail/' + item.id}>
+          <button type="button" class="btn btn-success">Details</button></Link>
+          </td>
+          <td>
+          <Link to={'/roomtableedit/' + item.id}>
             <button type="button" class="btn btn-primary">
               Edit
             </button>
           </Link>
+          </td>
+          <td>
           <button
             type="button"
             class="btn btn-danger"
@@ -81,23 +86,28 @@ function ItemTable(props) {
 
   return (
     <>
-      <table className="table">
+      <div style={{marginTop:"120px"}}><h2>Quản lý dữ liệu khách sạn</h2> <span></span>
+        <Link to="/roomtableedit/new">
+          <button className="btn btn-primary">Add new</button>
+        </Link>
+       
+      </div> 
+      <table style={{marginTop:"10px"}} className="table">
         <thead>
           <tr>
             <th onClick={() => sortColumn('id', 'number')}>
               <b>ID</b>
             </th>
-            <th onClick={() => sortColumn('name', 'string')}>Cat Name</th>
-
-            <th onClick={() => sortColumn('hPoint', 'number')}>
-              Health Point <span> </span>
-              {/*  <a href="?sort=desc">
-            <i class="fa fa-arrow-down"></i>
-          </a> */}
+            <th onClick={() => sortColumn('name', 'string')}> Name</th>
+            <th onClick={() => sortColumn('type', 'string')}>Type</th>
+            <th onClick={() => sortColumn('price', 'number')}>
+              Price <span> </span>
             </th>
-            <th onClick={() => sortColumn('mPoint', 'number')}>Mana Point</th>
-            <th onClick={() => sortColumn('stamina', 'number')}>Stamina</th>
+            <th onClick={() => sortColumn('.size', 'number')}>Size</th>
+            <th onClick={() => sortColumn('.capacity', 'number')}>Capacity</th>
             <th>Detail</th>
+            <th>Edit</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody className="table-group-divider">{item_list}</tbody>
