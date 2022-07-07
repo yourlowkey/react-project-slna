@@ -13,7 +13,7 @@ export default function RoomProvider({ children }) {
   useEffect(() => {
     start();
     axios
-      .get("https://62c51b0aa361f725127a8603.mockapi.io/api/rooms/rooms")
+      .get("https://62c63193a361f72512968244.mockapi.io/api/rooms")
       .then((response) => setData(response.data));
     stop();
   }, [start, stop]);
