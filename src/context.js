@@ -70,7 +70,7 @@ export default function RoomProvider({children}){
         const name = event.target.name;
         setState((prev)=> ({...prev,[name]:value}));
         if (name ==="type"){
-            filterRoomType(value);
+            filterRoomsType(value);
         }
         if (name === "capacity") {
             filterRoomsCapacity(value);
@@ -98,7 +98,7 @@ export default function RoomProvider({children}){
       let tempRooms =[...state.sortedRoom];
       if (value != 'all'){
         tempRooms= tempRooms.filter((room)=> room.type === value);
-        console.log({ ...prev, sortedRooms: tempRooms });
+        // console.log({...prev, sortedRooms: tempRooms });
       }
       setState((prev) => ({ ...prev, sortedRooms: tempRooms }));
     };

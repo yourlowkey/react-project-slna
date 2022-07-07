@@ -12,6 +12,9 @@ import About from './pages/About';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import Booknow from './pages/Booknow';
+import Admin from './pages/Admin';
+import RoomTableDetail from './pages/RoomTableDetail';
+import RoomTableEdit from './pages/RoomTableEdit'
 
 function App() {
 
@@ -25,6 +28,9 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/rooms/" component={Rooms} />
+          <Route exact path="/roomtabledetail/:id" component={RoomTableDetail} />
+          <Route exact path="/roomtableedit/:id" component={RoomTableEdit} />
+          <Route exact path="/admin/" component={Admin} />
           <Route exact path="/rooms/:slug" component={SingleRoom} />
           <Route exact path="/booknow/:slug" component={Booknow} />
           <Route component={Error} />
