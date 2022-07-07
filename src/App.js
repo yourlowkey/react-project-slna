@@ -17,7 +17,6 @@ import RoomTableDetail from './pages/RoomTableDetail';
 import RoomTableEdit from './pages/RoomTableEdit'
 
 function App() {
-
   return (
     <div className="App">
 
@@ -42,4 +41,3 @@ function App() {
 }
 
 export default App;
-

@@ -11,6 +11,15 @@
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
+span {
+  color: tomato!important;
+}
+.phone-number {
+  color: white!important;
+}
+.email{
+  color: white!important;
+}
 body {
   margin: 0;
   padding: 0;
@@ -20,6 +29,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.boss{
+  color:#8b0000;
 }
 .mark, mark {
   padding: 0.2em!important;
@@ -554,5 +566,8 @@ box-shadow: inset 0 -1px 0 yellow;
   font-size: 44px!important;
   padding: 5px 8px;
   
+}
+.badge-info {
+  background-color: lightgrey!important;
 }
 /* end of about us */
