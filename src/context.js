@@ -66,44 +66,6 @@ export default function RoomProvider({ children }) {
     return room;
   };
 
-<<<<<<< HEAD
-    const handleChange = (event) => {
-        const target = event.target;
-        const value = target.value ==="checkbox" ? target.checked : target.value;
-        const name = event.target.name;
-        setState((prev)=> ({...prev,[name]:value}));
-        if (name ==="type"){
-            filterRoomsType(value);
-        }
-        if (name === "capacity") {
-            filterRoomsCapacity(value);
-          }
-          if (name === "price") {
-            filterRoomsPrice(value);
-          }
-          if (name === "minPrice") {
-            filterRoomsType(value);
-          }
-          if (name === "maxPrice") {
-            filterRoomsType(value);
-          }
-          if (name === "breakfast") {
-            filterRoomsBreakfast(value);
-          }
-          if (name === "pets") {
-            filterRoomsPets(value);
-          }
-    };
-    const filterRoomsType = (value) => {
-        let { rooms, type, capacity, price, minSize, maxSize, breakfast, pets } =
-      state;
-
-      let tempRooms =[...state.sortedRoom];
-      if (value != 'all'){
-        tempRooms= tempRooms.filter((room)=> room.type === value);
-        // console.log({...prev, sortedRooms: tempRooms });
-      }
-=======
   const handleChange = (event) => {
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
@@ -166,7 +128,6 @@ export default function RoomProvider({ children }) {
     let tempRooms = [...state.sortedRooms];
     if (value) {
       tempRooms = tempRooms.filter((room) => room.breakfast === true);
->>>>>>> de4562817f8369861ca11c20973d0ca27aeb08dc
       setState((prev) => ({ ...prev, sortedRooms: tempRooms }));
     } else {
       setState((prev) => ({ ...prev, sortedRooms: rooms }));
