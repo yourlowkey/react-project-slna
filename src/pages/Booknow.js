@@ -101,6 +101,7 @@ export default function Booknow(props) {
                             </table>
                             <table className="table">
                                 <thead className="thead-light">
+                                    
                                     <tr>
                                         <th> <i class="fa fa-address-book" aria-hidden="true"></i> Họ và tên</th>
                                         <td> <input type="text" className="form-control-md" placeholder="VD: Nguyễn Nam Anh" required /></td>
