@@ -13,7 +13,7 @@ const Services = () => {
 
         {
             icon: <FaHiking />,
-            title: "Leo núi bất tận",
+            title: "Trò chơi hấp dẫn",
             info: "Trải nghiệm cảm giác leo núi, trượt tuyết cùng cả gia đình. Đặc biệt free vé cho trẻ em dưới 10 tuổi và giảm giá cho khách hàng VIP"
         },
 
