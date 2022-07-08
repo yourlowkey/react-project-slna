@@ -9,7 +9,7 @@ export default function Error() {
         <>
         <Hero hero="roomsError" />
          <Banner title="ERROR 404 NOT FOUND" subtitle= "Opp!!! Tìm kiếm của bạn không khả dụng">
-                <FaRegMeh className="lost"></FaRegMeh>
+                <FaRegMeh className="lost"></FaRegMeh><span> </span>
                 <Link to="/" className="btn btn-warning">
                 <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Quay về trang chủ
                 </Link>
