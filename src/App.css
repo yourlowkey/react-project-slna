@@ -101,6 +101,8 @@ color: rgb(139, 0, 0)!important;
 .btn-primary:hover{
   text-decoration: none;
   background: transparent!important;
+  background-color: blue;
+  border-color: blue;
   color: #fff!important;
 }
 .btn-warning:hover{
