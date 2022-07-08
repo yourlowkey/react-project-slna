@@ -26,7 +26,7 @@ function ItemTable(props) {
   };
 
   const deleteUser = (id) => {
-    fetch('https://62c63193a361f72512968244.mockapi.io/api/rooms' + id, {
+    fetch('https://62c63193a361f72512968244.mockapi.io/api/rooms/' + id, {
       method: 'DELETE',
     }).then(() => {
       console.log('delete successful!!');
@@ -55,15 +55,12 @@ function ItemTable(props) {
       >
         <td>{item.id}</td>
         <td>{item.fields.name}</td>
+        <td>{item.fields.slug}</td>
         <td>{item.fields.type}</td>
         <td>{item.fields.price}</td>
         <td>{item.fields.size}</td>
         <td>{item.fields.capacity}</td>
         {/* <td>{item.mark}</td> */}
-        <td>
-          <Link to={'/roomtabledetail/' + item.id}>
-          <button type="button" class="btn btn-success">Details</button></Link>
-          </td>
           <td>
           <Link to={'/roomtableedit/' + item.id}>
             <button type="button" class="btn btn-primary">
@@ -99,13 +96,13 @@ function ItemTable(props) {
               <b>ID</b>
             </th>
             <th onClick={() => sortColumn('name', 'string')}> Name</th>
+            <th onClick={() => sortColumn('slug', 'string')}> Slug</th>
             <th onClick={() => sortColumn('type', 'string')}>Type</th>
             <th onClick={() => sortColumn('price', 'number')}>
               Price <span> </span>
             </th>
             <th onClick={() => sortColumn('.size', 'number')}>Size</th>
             <th onClick={() => sortColumn('.capacity', 'number')}>Capacity</th>
-            <th>Detail</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
